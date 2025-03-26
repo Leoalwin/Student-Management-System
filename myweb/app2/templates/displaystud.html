@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <table>
+           
+
+            <tr><td> Student_id</td><td>Roll no</td><td>Name</td><td>Department</td><td>PhoneNumber </td><td> City</td></tr>
+         {% for su in stud %}
+            <tr>
+                <td>{{ su.student_id }}</td>
+                <td>{{ su.rollno }}</td>
+                <td>{{ su.name }}</td>
+                <td>{{ su.department }}</td>
+                <td>{{ su.phone }}</td>
+                <td>{{ su.city }}</td>
+                <td><a href="{% url 'one_student' %}?student_id={{su.student_id}}">Views </a></td>
+                <td><a href="{% url 'updstudent' %}?student_id={{su.student_id}}">Update </a></td>
+                <td><a href="{% url 'delete_one' %}?student_id={{su.student_id}}">Delete </a></td>
+
+
+            </tr>
+            
+            {% endfor %}
+                
+           <tr><td><a href="home"> HOMEPAGE </a></td></tr>
+           </form>
+            
+        </table>
+    </body>
+</html>

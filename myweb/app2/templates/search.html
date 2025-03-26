@@ -1,0 +1,26 @@
+<html>
+    <body>
+      <h2>STUDENT SEARCH</h2>
+       <form method="POST" action="search">
+           {% csrf_token %}
+         <P>Enter Name<input type="text" name="name" /></P>  
+         <p>Enter City:<input type="text" name="city" /></P> 
+         <p>Enter Department:<input type="text" name="department" /></P>          
+         
+
+         <input type="submit" value="Search"/>
+       </form>
+       {% if sresult %}
+       {% for s in sresult %}
+       <p>ID:{{s.student_id}},
+        Roll nO:{{s.rollno}},
+        Name:{{s.name}},
+        Department:{{s.department}},
+        Phone number:{{s.phone}},
+        City:{{s.city}}
+       </p>
+       {% endfor %}
+       {% endif %}
+       
+    </body>
+</html>

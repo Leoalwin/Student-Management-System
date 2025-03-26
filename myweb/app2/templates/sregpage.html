@@ -1,0 +1,26 @@
+<html>
+    <body>
+        
+        <h1> STUDENT RESISTRATION </h1>
+        <form method="POST" action="sprocess">
+          {% csrf_token %}
+        <p>Roll No:<INPUT type="text"name="rollno"/></p>
+        <p>Name:<INPUT type="text"name="name"/></p>
+        <p>Department:<select name="department">
+        <option value="CSE">CSE</option>
+        <option value="IT">IT</option>
+        <option value="ECE">ECE</option>
+        <option value="EEE">EEE</option>
+        </select>
+        </p>
+        <p>Phone Number:<input type="number"name="phone"/></p>
+        <p>City:<input type="text"name="city"/></p>
+        <input type="submit"value="RESISTRATER"/>
+        
+
+        </form>
+        
+    </body>
+</html>
+
+

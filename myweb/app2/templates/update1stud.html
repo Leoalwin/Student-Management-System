@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <center>
+            <form method="POST" action="updstudentprocess">
+              {% csrf_token %}
+              <table>
+                <th><td><h2>{{ Student.name }}</h2></td></th>
+                <tr><td>Student id</td><td>{{ Student.student_id }} 
+                <!-- hidden -->
+                 <input type="hidden" value="{{ Student.student_id }}" name="bid">
+                </td></tr>
+                <tr><td>Roll no</td><td><input type="text" value="{{ Student.rollno }}" name="rollno"></td></tr>
+                <tr><td>NAME</td><td><input type="text" value="{{ Student.name }}" name="name"></td></tr>
+                <tr><td>Department</td><td><input type="text" value="{{ Student.department }}" name="department"></td></tr>
+                <tr><td>PhoneNumber</td><td><input type="text" value="{{ Student.phone }}" name="phone"></td></tr>
+                <tr><td>City</td><td><input type="text" value="{{ Student.city }}" name="city"></td></tr>
+                <tr><td colspan="2"><center><input type="submit"value="updateStudent"></center></td></tr>
+                <tr><td colspan="2"><center><a href="allstudent">BACK</a></center></td></tr>
+
+
+            
+            
+
+
+              </table>
+        </center>
+    </form>
+    </body>
+</html>
